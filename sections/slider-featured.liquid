@@ -1,0 +1,47 @@
+<div class="flex flex-col items-center my-8">
+    <h1 class="text-center text-3xl">{{ section.settings.title}}</h1>
+    <div class="max-w-6xl mx-auto">
+        <div class=" overflow-hidden">
+            <div class="collection-slider">
+                <div class="swiper-wrapper">
+                    {% for product in section.settings.featured_collection.products %}
+                    <div class="swiper-slide">
+                        {% render 'product-card', product:product %}
+                    </div>
+                    {% else %}
+                    {% for item in (1..4) %}
+                    {%render 'product-card-placeholder'%}
+                    {% endfor %}
+                    {% endfor %}
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% schema %}
+{
+"name": "Slider Collection",
+"settings": [
+{
+"type": "text",
+"id": "title",
+"default": "Slider featured Collection",
+"label": "Title"
+},
+{
+"type": "collection",
+"id": "featured_collection",
+"label": "Collection"
+}
+],
+"presets": [
+{
+"name": "slider-collection"
+}
+]
+}
+{% endschema %}
