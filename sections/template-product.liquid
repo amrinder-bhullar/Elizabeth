@@ -98,6 +98,8 @@
                                                 {{ product.variants | json }}
                                             </script>
                     {% endfor %}
+                  <esc-wishlist-add-to-wishlist
+                                                                            :product="{{ product | json | escape }}">
                 </variant-selector>
                 {% endunless %}
             </div>
