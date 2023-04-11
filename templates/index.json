@@ -1,5 +1,10 @@
 {
   "sections": {
+    "033c6616-4bf8-4486-9afd-f4fe5e1b830b": {
+      "type": "hero",
+      "settings": {
+      }
+    },
     "featured-collection": {
       "type": "featured-collection",
       "settings": {
@@ -33,6 +38,7 @@
     }
   },
   "order": [
+    "033c6616-4bf8-4486-9afd-f4fe5e1b830b",
     "featured-collection",
     "d5aaf4ac-a05e-4be1-9774-1c78d0c3d7d2",
     "7972ef33-3223-4cd2-98c4-c2ccb3947263",
