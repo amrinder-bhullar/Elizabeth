@@ -1,0 +1,40 @@
+<section id="banner" class="section-m1">
+  <h4>{{ section.settings.title }}</h4>
+  <h2>Up to
+    <span>70% off</span>
+    - All t-shirts & Accessories</h2>
+  <button class="normal">Explore More</button>
+</section>
+<style>
+
+  #banner {
+    {% if section.settings.heroBackground != blank %}
+      background-image: url('{{ section.settings.wideBannerBackground.src | img_url: 'master' }}');
+    {% else %}
+      background-image: url('https://cdn.shopify.com/s/files/1/0659/5077/7568/files/b2.jpg?v=1682449188');
+    {% endif %}
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "wide-banner",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "default": "Repair Services",
+        "label": "Title"
+      }, {
+        "type": "image_picker",
+        "id": "wideBannerBackground",
+        "label": "Background Image"
+      }
+    ],
+    "presets": [
+      {
+        "name": "wide-banner"
+      }
+    ]
+  }
+{% endschema %}

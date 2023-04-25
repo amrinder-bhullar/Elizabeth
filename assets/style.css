@@ -123,7 +123,7 @@ h1 {
   }
   
   #hero button {
-      background-image: url(./img/button.png);
+      background-image: url('https://cdn.shopify.com/s/files/1/0659/5077/7568/files/button_png.png?v=1682423511');
       background-color: transparent;
       color: #088178;
       border: 0;
@@ -194,6 +194,7 @@ h1 {
       justify-content: space-between;
       padding-top:20px;
       flex-wrap: wrap;
+      max-width: 90vw;
   }
   
   #product1 .pro {
@@ -262,7 +263,6 @@ h1 {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      background-image: url('img/banner/b2.jpg');
       background-size: cover;
       background-position: center;
       width: 100%;
@@ -483,6 +483,7 @@ h1 {
       text-decoration: none;
       color: #222;
       margin-bottom: 10px;
+      text-transform: capitalize;
   }
   
   footer .follow {

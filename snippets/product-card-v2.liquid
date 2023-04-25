@@ -1,0 +1,44 @@
+<div class="pro">
+  {% if product.featured_image %}
+    <img
+      src="{{product.featured_image | img_url: 'large' }}"
+      alt="{{ product.featured_image.title }}"
+      loading="lazy">
+  {% else %}
+    {{ 'product-1' | placeholder_svg_tag: "w-full h-full object-cover bg-gray-200" }}
+  {% endif %}
+  <div class="des">
+    <span>{{ product.vendor }}</span>
+    <h5>{{ product.title }}</h5>
+    <div class="star">
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+    </div>
+    <h4>{{ product.price | money }}</h4>
+  </div>
+  <a href="{{product.url}}">
+    <i class="fas fa-shopping-cart cart"></i>
+  </a>
+</div>
+
+{% comment %} <div class="w-full py-6 px-3">
+  <div class="border bg-white shadow-lg rounded-lg overflow-hidden">
+  <a href="{{product.url}}">
+  {% if product.featured_image %}
+  <div class="h-80 overflow-hidden">
+  <img class="w-full h-full object-cover transition duration-1000 ease-in-out hover:scale-105 transform"
+  src="{{product.featured_image | img_url: 'large' }}" alt="{{ product.featured_image.title }}" loading="lazy">
+  </div>
+  {% else %}
+  {{'product-1' | placeholder_svg_tag: "w-full h-full object-cover bg-gray-200"}}
+  {% endif %}
+  </a>
+  <div class="flex justify-center-items-center flex-col p-4">
+  <span class="text-sm text-gray-400">{{product.vendor}}</span>
+  <a href="{{product.url}}" class="text-gray-700 uppercase font-medium">{{product.title}}</a>
+  <p class="text-gray-500">{{product.price | money}}</p>
+  </div>
+  </div>
+</div> {% endcomment %}
