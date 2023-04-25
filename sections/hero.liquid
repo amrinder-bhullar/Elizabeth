@@ -1,0 +1,92 @@
+<section id="hero">
+  {% if section.settings.title != blank %}
+    <h4 class="pb-3 text-black text-xl">{{ section.settings.title }}</h4>
+  {% endif %}
+  <h2>Super value deals</h2>
+  <h1>on all products</h1>
+  <p>Save more with cupons & up to 70% off!</p>
+  <button>Shop Now</button>
+</section>
+
+<style>
+  {% if section.settings.title != blank %}
+    #hero {
+      background-image: url('{{ section.settings.heroBackground.src | img_url: 'master' }}');
+    }
+  {% endif %}
+</style>
+
+{% comment %} <div class="flex flex-col items-center my-8">
+  {% if section.settings.title != blank %}
+  <h1 class="text-3xl font-medium my-8 md:my-16">{{ section.settings.title }}</h1>
+  {% endif %}
+  <div class="w-full h-60 flex items-center justify-center gap-5 px-4">
+  <div class="h-full bg-gray-200 flex-1 flex shadow-lg">
+  <div class="w-1/2">
+  {% if section.settings.image1 %}
+  <img
+  class="w-full h-full object-cover"
+  src=" {{ section.settings.image1 | img_url: 'large'}} "
+  alt="">
+  {% else %}
+  {{ 'product-1' | placeholder_svg_tag: "w-full h-full object-cover bg-gray-200" }}
+  {% endif %}
+  </div>
+  <div class="w-1/2 relative">
+  <p class="text-gray-700 p-3 text-center">{{ section.settings.testimonial-1 }}</p>
+  <p class="absolute bottom-4 left-3">- Name</p>
+  </div>
+  </div>
+  <div class="h-full bg-gray-200 flex-1 flex shadow-lg">
+  <div class="w-1/2">
+  {% if section.settings.image2 %}
+  <img
+  class="w-full h-full object-cover"
+  src=" {{ section.settings.image2 | img_url: 'large'}} "
+  alt="">
+  {% else %}
+  {{ 'product-1' | placeholder_svg_tag: "w-full h-full object-cover bg-gray-200" }}
+  {% endif %}
+  </div>
+  <div class="w-1/2">
+  <p class="text-gray-700 p-3 text-center">{{ section.settings.testimonial-2 }}</p>
+  </div>
+  </div>
+  <div class="h-full bg-gray-200 flex-1 flex shadow-lg">
+  <div class="w-1/2">
+  {% if section.settings.image3 %}
+  <img
+  class="w-full h-full object-cover"
+  src=" {{ section.settings.image3 | img_url: 'large'}} "
+  alt="">
+  {% else %}
+  {{ 'product-1' | placeholder_svg_tag: "w-full h-full object-cover bg-gray-200" }}
+  {% endif %}
+  </div>
+  <div class="w-1/2">
+  <p class="text-gray-700 p-3 text-center">{{ section.settings.testimonial-3 }}</p>
+  </div>
+  </div>
+  </div>
+</div> {% endcomment %}{% schema %}
+  {
+    "name": "hero",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "default": "Trade-in-offer",
+        "label": "Title"
+      }, {
+        "type": "image_picker",
+        "id": "heroBackground",
+        "label": "Background Image"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Hero"
+      }
+    ]
+  }
+{% endschema %}
