@@ -1,5 +1,8 @@
 {
     "sections":{
+        "hero": {
+            "type": "hero"
+        },
         "featured-collection": {
             "type": "featured-collection",
             "settings": {
