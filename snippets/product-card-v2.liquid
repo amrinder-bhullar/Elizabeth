@@ -1,26 +1,47 @@
 <div class="pro">
-  {% if product.featured_image %}
-    <img
-      src="{{product.featured_image | img_url: 'large' }}"
-      alt="{{ product.featured_image.title }}"
-      loading="lazy">
-  {% else %}
-    {{ 'product-1' | placeholder_svg_tag: "w-full h-full object-cover bg-gray-200" }}
-  {% endif %}
-  <div class="des">
-    <span>{{ product.vendor }}</span>
-    <h5>{{ product.title }}</h5>
-    <div class="star">
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-    </div>
-    <h4>{{ product.price | money }}</h4>
-  </div>
   <a href="{{product.url}}">
-    <i class="fas fa-shopping-cart cart"></i>
+    {% if product.featured_image %}
+      <img
+        src="{{product.featured_image | img_url: 'large' }}"
+        alt="{{ product.featured_image.title }}"
+        loading="lazy">
+    {% else %}
+      {{ 'product-1' | placeholder_svg_tag: "w-full h-full object-cover bg-gray-200" }}
+    {% endif %}
+    <div class="des">
+      <span>{{ product.vendor }}</span>
+      <h5>{{ product.title }}</h5>
+      <div class="star">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+      </div>
+      <h4>{{ product.price | money }}</h4>
+    </div>
   </a>
+  {% comment %} <a href="#">
+    <i class="fas fa-shopping-cart cart"></i>
+  </a> {% endcomment %}<form
+    class="product-form"
+    action="/cart/add"
+    data-productid="{{product.id}}"
+    id="form1"
+    method="post">
+    <input
+      type="hidden"
+      name="id"
+      data-productid="{{product.id}}"
+      class="product-select"
+      value="{{ product.variants[0].id }}"
+      data-variant-title="{{ product.variants[0].title }}" />
+    <button type="submit" class="cart">
+      <i class="fas fa-shopping-cart"></i>
+    </button>
+    {% comment %} <i class="fas fa-shopping-cart cart"><input type="submit" /></i> {% endcomment %}
+    {% comment %} <i class="fas fa-shopping-cart cart"></i> {% endcomment %}
+  </form>
+
 </div>
 
 {% comment %} <div class="w-full py-6 px-3">

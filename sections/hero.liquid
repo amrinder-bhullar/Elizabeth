@@ -12,66 +12,14 @@
 
   #hero {
     {% if section.settings.heroBackground != blank %}
-      background-image: url('{{ section.settings.heroBackground.src | img_url: 'master' }}');
+      background-image: url('{{ section.settings.heroBackground.src | image_url: 'master' }}');
     {% else %}
       background-image: url('https://cdn.shopify.com/s/files/1/0359/6717/2748/files/hero4.png?v=1682438453');
     {% endif %}
   }
 </style>
 
-{% comment %} <div class="flex flex-col items-center my-8">
-  {% if section.settings.title != blank %}
-  <h1 class="text-3xl font-medium my-8 md:my-16">{{ section.settings.title }}</h1>
-  {% endif %}
-  <div class="w-full h-60 flex items-center justify-center gap-5 px-4">
-  <div class="h-full bg-gray-200 flex-1 flex shadow-lg">
-  <div class="w-1/2">
-  {% if section.settings.image1 %}
-  <img
-  class="w-full h-full object-cover"
-  src=" {{ section.settings.image1 | img_url: 'large'}} "
-  alt="">
-  {% else %}
-  {{ 'product-1' | placeholder_svg_tag: "w-full h-full object-cover bg-gray-200" }}
-  {% endif %}
-  </div>
-  <div class="w-1/2 relative">
-  <p class="text-gray-700 p-3 text-center">{{ section.settings.testimonial-1 }}</p>
-  <p class="absolute bottom-4 left-3">- Name</p>
-  </div>
-  </div>
-  <div class="h-full bg-gray-200 flex-1 flex shadow-lg">
-  <div class="w-1/2">
-  {% if section.settings.image2 %}
-  <img
-  class="w-full h-full object-cover"
-  src=" {{ section.settings.image2 | img_url: 'large'}} "
-  alt="">
-  {% else %}
-  {{ 'product-1' | placeholder_svg_tag: "w-full h-full object-cover bg-gray-200" }}
-  {% endif %}
-  </div>
-  <div class="w-1/2">
-  <p class="text-gray-700 p-3 text-center">{{ section.settings.testimonial-2 }}</p>
-  </div>
-  </div>
-  <div class="h-full bg-gray-200 flex-1 flex shadow-lg">
-  <div class="w-1/2">
-  {% if section.settings.image3 %}
-  <img
-  class="w-full h-full object-cover"
-  src=" {{ section.settings.image3 | img_url: 'large'}} "
-  alt="">
-  {% else %}
-  {{ 'product-1' | placeholder_svg_tag: "w-full h-full object-cover bg-gray-200" }}
-  {% endif %}
-  </div>
-  <div class="w-1/2">
-  <p class="text-gray-700 p-3 text-center">{{ section.settings.testimonial-3 }}</p>
-  </div>
-  </div>
-  </div>
-</div> {% endcomment %}{% schema %}
+{% schema %}
   {
     "name": "hero",
     "settings": [

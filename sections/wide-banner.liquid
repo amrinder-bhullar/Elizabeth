@@ -8,7 +8,7 @@
 <style>
 
   #banner {
-    {% if section.settings.heroBackground != blank %}
+    {% if section.settings.wideBannerBackground != blank %}
       background-image: url('{{ section.settings.wideBannerBackground.src | img_url: 'master' }}');
     {% else %}
       background-image: url('https://cdn.shopify.com/s/files/1/0659/5077/7568/files/b2.jpg?v=1682449188');

@@ -607,6 +607,57 @@ h1 {
   #pro-details .single-pro-details span{
       line-height: 25px;
   }
+
+  .btn-add-cart{
+    background-color: #088178;
+  }
+  .btn-add-cart:hover {
+    background-color: #0e5c56;
+  }
+
+  .tabs {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    /* align-items: center; */
+    justify-content: center;
+    margin: auto;
+}
+
+.tab-btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.tab-btn {
+    padding: 20px;
+    width: 100%;
+    background-color: #E3e6f3;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tab-btn.active {
+    background-color: #088178;
+    color: #fff;
+}
+
+.tabs-content {
+    padding: 40px 20px;
+    border: 1px solid #cce7d0;
+    border-top: none;
+    height: 30vh;
+    overflow: scroll;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
   
   /* Blog page */
   
@@ -867,5 +918,9 @@ h1 {
       #blog .blog-details {
           width: 100%;
       }
+
+      .tab-btns{
+        flex-direction: column;
+    }
   
   }
