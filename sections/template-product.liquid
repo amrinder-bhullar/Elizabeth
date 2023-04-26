@@ -125,7 +125,8 @@
             {% when 'description' %}
             <div class="my-3">
               <p class="text-gray-700">{{ product.description }}</p>
-              <p>{{ product.metafields.tabs.materials.value | join: ',' }} materials</p>
+              <p>
+                materials</p>
             </div>
             {% when 'checkout_button' %}
 
@@ -163,14 +164,17 @@
     </div>
     <div class="tabs-content">
       <div class="tab-content active">{{ product.description }}</div>
-      <div class="tab-content">2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit assumenda
-        laudantium fuga necessitatibus corporis! Quae, omnis et ex explicabo voluptates ipsum maxime eum!
-                                                                        Asperiores magnam dolores dignissimos repellat fugiat totam natus accusamus excepturi neque, et rerum
-                                                                        distinctio, rem perspiciatis consequatur!</div>
+      <div class="tab-content">
+        {% if product.metafields.tabs.materials.value != null %}
+          {{ product.metafields.tabs.materials.value }}
+        {% else %}
+          <p>Please contact us to know the materials</p>
+        {% endif %}
+      </div>
       <div class="tab-content">3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit assumenda
         laudantium fuga necessitatibus corporis! Quae, omnis et ex explicabo voluptates ipsum maxime eum!
-                                                                        Asperiores magnam dolores dignissimos repellat fugiat totam natus accusamus excepturi neque, et rerum
-                                                                        distinctio, rem perspiciatis consequatur!</div>
+                                                                                                        Asperiores magnam dolores dignissimos repellat fugiat totam natus accusamus excepturi neque, et rerum
+                                                                                                        distinctio, rem perspiciatis consequatur!</div>
     </div>
   </section>
 </div>
