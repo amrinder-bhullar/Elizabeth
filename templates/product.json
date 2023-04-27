@@ -56,10 +56,19 @@
       "type": "apps",
       "settings": {
       }
+    },
+    "df5b3ba3-afd5-4d8c-aab4-1fa36b204adf": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "You may also like",
+        "featured_collection": "summer-collection",
+        "number_of_products_to_show": 4
+      }
     }
   },
   "order": [
     "template",
-    "16725259447ac72891"
+    "16725259447ac72891",
+    "df5b3ba3-afd5-4d8c-aab4-1fa36b204adf"
   ]
 }
