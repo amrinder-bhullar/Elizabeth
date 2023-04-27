@@ -618,10 +618,10 @@ h1 {
   .tabs {
     display: flex;
     flex-direction: column;
-    width: 80vw;
+    width: 100%;
     /* align-items: center; */
     justify-content: center;
-    margin: auto;
+    /* margin: auto; */
 }
 
 .tab-btns {
@@ -648,7 +648,7 @@ h1 {
     border: 1px solid #cce7d0;
     border-top: none;
     height: 30vh;
-    overflow: scroll;
+    overflow-y: overlay;
 }
 
 .tab-content {

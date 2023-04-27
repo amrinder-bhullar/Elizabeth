@@ -151,32 +151,34 @@
 
           {% endcase %}
         {% endfor %}
-
-
       {% endform %}
     </div>
   </div>
-  <section class="tabs">
-    <div class="tab-btns">
-      <div class="tab-btn active">Description</div>
-      <div class="tab-btn">Materials</div>
-      <div class="tab-btn">shipping</div>
-    </div>
-    <div class="tabs-content">
-      <div class="tab-content active">{{ product.description }}</div>
-      <div class="tab-content">
-        {% if product.metafields.tabs.materials.value != null %}
-          {{ product.metafields.tabs.materials.value }}
-        {% else %}
-          <p>Please contact us to know the materials</p>
-        {% endif %}
+  <div class="mx-2">
+    <section class="tabs mx-auto">
+      <div class="tab-btns">
+        <div class="tab-btn active">Description</div>
+        <div class="tab-btn">Materials</div>
+        <div class="tab-btn">shipping</div>
       </div>
-      <div class="tab-content">3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit assumenda
-        laudantium fuga necessitatibus corporis! Quae, omnis et ex explicabo voluptates ipsum maxime eum!
-                                                                                                        Asperiores magnam dolores dignissimos repellat fugiat totam natus accusamus excepturi neque, et rerum
-                                                                                                        distinctio, rem perspiciatis consequatur!</div>
-    </div>
-  </section>
+      <div class="tabs-content">
+        <div class="tab-content active">{{ product.description }}</div>
+        <div class="tab-content">
+          {% if product.metafields.tabs.materials.value != null %}
+            <p>
+              {{ product.metafields.tabs.materials.value }}
+            </p>
+          {% else %}
+            <p>Please contact us to know the materials</p>
+          {% endif %}
+        </div>
+        <div class="tab-content">
+          <p>{{ section.settings.thirdTabContent }}
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
 </div>
 
 <script>
@@ -325,6 +327,18 @@
       "type": "checkout_button",
       "name": "Checkout Button",
       "limit": 1
+    }
+  ],
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "thirdTabContent",
+      "label": "third tab"
+    }
+  ],
+  "presets": [
+    {
+      "name": "product-template"
     }
   ]
 }
