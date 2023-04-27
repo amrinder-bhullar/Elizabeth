@@ -49,20 +49,11 @@
         "checkout_button"
       ],
       "settings": {
+        "thirdTabContent": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit laudantium aut est magnam, accusantium vitae adipisci enim cum dignissimos dolore perspiciatis porro distinctio, assumenda quas eligendi consequatur, dolorum animi dolorem architecto sunt? Id culpa ad quis nulla dolorem numquam neque!"
       }
     },
     "16725259447ac72891": {
       "type": "apps",
-      "blocks": {
-        "990daaeb-ce64-456a-8c4c-87cfa7b74c05": {
-          "type": "shopify:\/\/apps\/back-in-stock-restock-alerts\/blocks\/app-block\/839cbcb7-0406-4c2b-8e74-a54d987b90ab",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "990daaeb-ce64-456a-8c4c-87cfa7b74c05"
-      ],
       "settings": {
       }
     }
