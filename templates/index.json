@@ -32,6 +32,9 @@
         "featured_collection": "summer-collection",
         "number_of_products_to_show": 4
       }
+    },
+    "small-banners":{
+        "type": "2-sm-banners"
     }
   },
   "order": [
@@ -39,6 +42,7 @@
     "features",
     "featured-collection",
     "wide-banner",
-    "32940823-a7bb-4aa7-85b9-f45127cce813"
+    "32940823-a7bb-4aa7-85b9-f45127cce813",
+    "small-banners"
   ]
 }
