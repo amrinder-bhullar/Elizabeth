@@ -1,20 +1,48 @@
 {
-    "sections":{
-        "hero":{
-            "type": "hero"
-        },
-        "features":{
-            "type":"features"
-        },
-        "featured-collection": {
-            "type": "featured-collection",
-            "settings": {
-                "featured_collection": "all"
-            }
-        },
-            "wide-banner":{
-                "type":"wide-banner"
-            }
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "settings": {
+        "title": "Trade-in-offer"
+      }
     },
-    "order":["hero","features","featured-collection","wide-banner"]
+    "features": {
+      "type": "features",
+      "settings": {
+      }
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured collection",
+        "featured_collection": "all",
+        "number_of_products_to_show": 8
+      }
+    },
+    "wide-banner": {
+      "type": "wide-banner",
+      "settings": {
+        "title": "Repair Services"
+      }
+    },
+    "32940823-a7bb-4aa7-85b9-f45127cce813": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "New products",
+        "featured_collection": "summer-collection",
+        "number_of_products_to_show": 4
+      }
+    },
+    "small-banners":{
+        "type": "2-sm-banners"
+    }
+  },
+  "order": [
+    "hero",
+    "features",
+    "featured-collection",
+    "wide-banner",
+    "32940823-a7bb-4aa7-85b9-f45127cce813",
+    "small-banners"
+  ]
 }

@@ -304,13 +304,8 @@ h1 {
       align-items: start;
       justify-content: center;
       margin-bottom: 20px;
-      background-image: url('/img/banner/b17.jpg');
       background-position: center;
       background-size: cover;
-  }
-  
-  #sm-banner .banner-l {
-      background-image: url('/img/banner/b10.jpg');
   }
   
   #sm-banner .banner-box h4 {
@@ -375,7 +370,6 @@ h1 {
       align-items: start;
       justify-content: center;
       margin-bottom: 20px;
-      background-image: url('/img/banner/b7.jpg');
       background-position: center;
       background-size: cover;
   }
@@ -390,13 +384,7 @@ h1 {
       font-weight: 800;
       font-size: 15px;
   }
-  
-  #banner3 .banner-box2{
-      background-image: url('/img/banner/b4.jpg');
-  }
-  #banner3 .banner-box3{
-      background-image: url('/img/banner/b18.jpg');
-  }
+
   
   #newsletter {
       display: flex;
