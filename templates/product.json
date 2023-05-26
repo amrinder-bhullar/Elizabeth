@@ -54,6 +54,16 @@
     },
     "16725259447ac72891": {
       "type": "apps",
+      "blocks": {
+        "46950bb5-7055-4e98-83b2-cf052b426250": {
+          "type": "shopify:\/\/apps\/product-reviews\/blocks\/reviews\/bae150af-8da8-48b2-9867-398188115e5f",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "46950bb5-7055-4e98-83b2-cf052b426250"
+      ],
       "settings": {
       }
     },
